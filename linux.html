@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/toastr.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--<script src="js/js.js"></script>-->
+    <script src="js/jquery-3.4.1.min.js" ></script>
+    
+    <title>Joham Medina-Linux</title>
+  	</head>
+  	<body>
+
+  	<!-- NavBAR	 -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark navbar-dark" >
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+  		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="index.html" style="color: #fffefe">Inicio</a>
+			    </li>
+
+			    <li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" style="color: #fffefe" href="linux.html" id="navbardrop" data-toggle="dropdown">
+			        Windows
+			      </a>
+			      <div class="dropdown-menu">
+			      	<a class="dropdown-item" href="windows.html">SERVICIOS</a>
+			        <a class="dropdown-item" href="windows.html#windowsPreconfiguraciones">Preconfiguraciones</a>
+			        <a class="dropdown-item" href="windows.html#windowsAD">Active Directory</a>
+			        <a class="dropdown-item" href="windows.html#windowsDNS">DNS</a>
+			        <a class="dropdown-item" href="windows.html#windowsDHCP">DHCP</a>
+			        <a class="dropdown-item" href="windows.html#windowsHTTPyFTP">HTTP & FTP</a>
+			        <a class="dropdown-item" href="windows.html#windowsSMTP">SMTP</a>
+			      </div>
+			    </li>
+
+			    <li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" style="color: #fffefe" href="#" id="navbardrop" data-toggle="dropdown">
+			        Linux
+			      </a>
+			      <div class="dropdown-menu">
+			      	<a class="dropdown-item" href="">SERVICIOS</a>
+			        <a class="dropdown-item" href="#linuxIPSTATIC">IP STATIC</a>
+			        <a class="dropdown-item" href="#linuxDNS">DNS</a>
+			        <a class="dropdown-item" href="#linuxDHCP">DHCP</a>
+			        <a class="dropdown-item" href="#linuxFTP">FTP</a>
+			        <a class="dropdown-item" href="#linuxHTTP">HTTP</a>
+			        <a class="dropdown-item" href="#linuxSMTP">SMTP</a>
+			      </div>
+			    </li>
+
+			    <li class="nav-item">
+		      		<a class="nav-link" href="about.html" style="color: #fffefe">Acerca de</a>
+		    	</li>
+			    	    	
+			</ul>
+    	</div>
+	</nav>
+	
+	<!-- Titulo Windows -->
+
+	<div class="jumbotron jumbotron-fluid " style="background-color:#33691e; color: #fffefe">
+  				<div class="container">
+    				<h1 class="display-5 text-center">LINUX DEBIAN</h1>
+    				<p class="lead text-center">En esta sección encontrara un tutorial paso a paso de como instalar un servidor web que ofresca los servicios de DNS, DHCP, FTP, STMP & HTTP en la Distribucción de Linux Debian</p>
+  				</div>
+		</div>
+
+	<!-- Contenedor  General  -->
+	<div class="container">	
+
+	<!-- TITULO  IP STATIC -->	
+	<a name="linuxIPSTATIC">
+		<div class="jumbotron jumbotron-fluid " style="background-color:#943126 ; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">IP STATIC</h1>
+	    				<p class="lead text-center">Para iniciar se debe configurar una IP estatica al servidor
+	    				</p>
+	  				</div>
+		</div>
+	</a>	
+	
+	<br>
+	<!-- PASOS DE IP STATIC  -->
+	<!-- Primera Fila  Pre Configuraciones -->
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/IP-STATIC/ipStatic.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center">En primer lugar se mofifica el archivo "/etc/network/interfaces" en donde se añade auto eth0[eth0 es el nombre de la terjeta de red] y se añade la address,la netmask,network,broadcast,gateway correspodinetes al red.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/IP-STATIC/ipStatic2.png" width="300" height="300"alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center">Se reinicia el servicio de NETWORKING con el comando "/etc/networking restart"</p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>	
+
+    <br>
+	<!-- TITULO  DNS -->	
+	<a name="linuxDNS">
+		<div class="jumbotron jumbotron-fluid " style="background-color:  #d35400 ; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">Configuración servicio DNS</h1>
+	    				<p class="lead text-center">DNS son las iniciales de Domain Name System (sistema de nombres de dominio) y es una tecnología basada en una base de datos que sirve para resolver nombres en las redes, es decir, para conocer la dirección IP de la máquina donde está alojado el dominio al que queremos acceder.
+	    				</p>
+	  				</div>
+		</div>
+	</a>	
+	
+	<br>
+	<!-- PASOS DE DNS  -->
+
+	<!-- Primera Fila  DNS-->
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS1.png " width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center">Instalamos el paquete "bind9" con el comando "apt-get install bind9".</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS2.png" width="300" height="300"alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center">Se configura el archivo "/etc/bind/named.conf.local" como se muestra en la imagen[donde va "joham.com" es el domio que queremos asignar]; en la segunda zone "13.168.192.in-addr.apa" es la direccion inversa a la del servidor DNS los primero 3 octetos. Los archivos "file" de cada ZONE son archivos que de deben crear para posteriormente ser modificados</p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>
+
+		<br>
+		<!-- Segunda Fila DNS -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS3.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 3</h5>
+			    		<p class="card-text text-center">Se configura el archivo "/etc/bind/db.joham.com"[el nombre del arhivo no importa] que fue declarado en el paso 2, en ZONE y atributo FILE.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS4.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 4</h5>
+			    		<p class="card-text text-center">Se configura el archivo "/etc/bind/13.168.192"[el nombre del arhivo no importa] que fue declarado en el paso 2, en ZONE y atributo FILE.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+	    </div>	
+
+	    
+	    <br>
+		<!-- Tercera Fila DNS -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS5.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 5</h5>
+			    		<p class="card-text text-center">Se configura el archivo "/etc/bind/named.conf.options como se muestra en la imagen, se coloca "192.168.13.13"[Direccion estatica de la maquina].
+			    		</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DNS/DNS6.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Se configura el archivo "/etc/hosts" como se muestra en la imagen, y se reinicia el servicio DNS para cargar las configuraciones que hemos hecho, se reinicia el servicio DNS con el comando "/etc/init.d/bind9 restart".</h5>
+			    		<p class="card-text text-center"></p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+	    </div>	
+
+	<br>
+	<br>    	
+	<!-- TITULO  SERVICIO DHCP -->	
+	<a name="linuxDHCP">
+		<div class="jumbotron jumbotron-fluid " style="background-color:#138d75; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">Configuración servicio DHCP</h1>
+	    				<p class="lead text-center">DHCP significa protocolo de configuración de host dinámico y es un protocolo de red utilizado en redes IP donde un servidor DHCP asigna automáticamente una dirección IP y otra información a cada host en la red para que puedan comunicarse de manera eficiente con otros puntos finales.
+	    				</p>
+	  				</div>
+		</div>
+	</a>  
+
+	<br>
+	<!-- PASOS DE SERVICIO DHCP  -->
+
+	<!-- Primera Fila  DHCP-->
+		<div class="card-deck">
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DHCP/DHCP1.png" width="300px" height="300px" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center">En primer lugar se instalar el paquete "isc-dhcp-server" con el comando "apt-get install isc-dhcp-server".</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/DHCP/DHCP2.png" width="300px" height="300px" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center">Se modifica el siguiente archivo "/etc/dhcp/dhcpd.conf" como se muestra en la imagen, y se reinicia el servicio con el comando "/etc/init.d/isc-dhcp-server restart".</p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>
+    	
+	<br>
+	<br>
+	<!-- TITULO  SERVICIO FTP -->	
+	<a name="linuxFTP">
+		<div class="jumbotron jumbotron-fluid " style="background-color:#2980b9; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">Configuración servicio FTP</h1>
+	    				<p class="card-text text-center">FTP (Siglas en inglés de File Transfer Protocol, o sea, Protocolo de Transferencia de Archivos) a un protocolo para la transferencia de información entre sistemas conectados a una red TCP (siglas en inglés de Transmission Control Protocol, o sea, Protocolo de Control de Transmisión) que se base en la arquitectura cliente-servidor.
+						En otras palabras, es un protocolo o método de comunicación que permite cargar y descargar archivos hacia o desde un computador (servidor) a otro (cliente), independientemente del sistema operativo que ambos usen.</p>
+	  				</div>
+		</div>
+	</a>
+
+	<br>
+	<br>
+	<!-- PASOS DE SERVICIO FTP  -->
+
+	<!-- Primera Fila  FTP-->
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/FTP/FTP1.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center">Instalamos el paquete "vsftpd" con el comando "apt-get install vsftpd". </p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/FTP/FTP2.png" width="300" height="300"alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center">Agregamos Usuarios para que se puedan validar, la ruta "/home/joham/FTP" es la ruta donde el usuariotendra acceso a traves de FTP.</p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>
+
+		<br>
+		<!-- Segunda Fila FTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/FTP/FTP3.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 3</h5>
+			    		<p class="card-text text-center">Con este comando se le asignara una clave al usuario que le acabamos de crear[PASO 2].</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/FTP/FTP4.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 4</h5>
+			    		<p class="card-text text-center">Accedemos al FTP digitando "ftp://192.168.13.13" que es el dominio que hemos creado con el DNS.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+    	</div>		
+    <br>
+	<br>
+	<!-- TITULO  SERVICIO HTTP -->	
+	<a name="linuxHTTP">
+		<div class="jumbotron jumbotron-fluid " style="background-color: #239b56; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">Configuración servicio HTTP</h1>
+	    				<p class="card-text text-center">Hypertext Transfer Protocol (HTTP) (o Protocolo de Transferencia de Hipertexto en español) es un protocolo de la capa de aplicación para la transmisión de documentos hipermedia, como HTML. Fue diseñado para la comunicación entre los navegadores y servidores web, aunque puede ser utilizado para otros propósitos también.</p>			    		
+	  				</div>
+		</div>
+	</a>
+
+	<br>
+	<br>
+	<!-- PASOS DE SERVICIO HTTP -->
+
+	<!-- Primera Fila  HTTP-->
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/HTTTP/HTTTP1.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center">En primer lugar se instalar el paquete "apache2" con el comando "apt-get install apache2"</p>			    		
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/HTTTP/HTTTP2.png" width="300" height="300"alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center">Finalizada la instalacion nos dirigimos a la ruta "/var/www/html/" en esta ruta pondemos la pagina que quememos se visualize al digitar la dirección del servidor o el nombre del dominio, y se reinicia el servicio con el comando "/etc/init.d/apache2 restart" </p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>
+    <br>
+	<br>
+	<!-- TITULO  SERVICIO SMTP -->	
+	<a name="linuxSMTP">
+		<div class="jumbotron jumbotron-fluid " style="background-color:#616a6b  ; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">Configuración servicio SMTP</h1>
+	    				<p class="lead text-center">SMTP (Simple Mail Transfer Protocol, o protocolo simple de transferencia de correo) es un protocolo básico que permite que los emails viajen a través de Internet.
+	    				Es decir, es un protocolo de mensajería empleado para mandar un email de un servidor de origen a un servidor de destino. Este procedimiento, indispensable en el proceso de envío de emails, es completado por el servidor SMTP.
+	    				</p>
+	  				</div>
+		</div>
+	</a>
+
+	<br>
+	<br>
+	<!-- PASOS DE SERVICIO SMTP  -->
+
+	<!-- Primera Fila  SMTP-->
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 1</h5>
+			    		<p class="card-text text-center"></p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300"alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 2</h5>
+			    		<p class="card-text text-center"></p>
+		    		</div>
+	    		</div>
+	    	</div>
+    	</div>
+
+		<br>
+		<!-- Segunda Fila SMTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 3</h5>
+			    		<p class="card-text text-center"></p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 4</h5>
+			    		<p class="card-text text-center"></p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+    	</div>
+
+	 	<br>
+    	<br>
+		<div class="jumbotron jumbotron-fluid " style="background-color:#a93226; color: #fffefe">
+	  				<div class="container">
+	    				<h1 class="display-5 text-center">FIN</h1>
+	    			</div>
+		</div>
+	
+
+	</div>    
+ <!-- Final Contenedor  General  -->
+  	
+<!-- Footer -->
+	<footer class="py-4 bg-dark text-white-50">
+	    <div class="container text-center">
+	      <small>Copyright &copy; Joham Sebastian Medina Corredor</small>
+	    </div>
+  	</footer>
+	<!-- Footer -->
+
+	<!-- Boton de ir ARRIBA -->
+	<span class="goTOP">
+		<i class="fas fa-arrow-alt-circle-up"></i>
+	</span>
+ 	<!-- Scrip de boton de ir ARRIBA-->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+ 
+		$('.goTOP').click(function(){
+			$('body, html').animate({
+				scrollTop: '0px'
+			}, 300);
+		});
+ 
+		$(window).scroll(function(){
+			if( $(this).scrollTop() > 0 ){
+				$('.goTOP').slideDown(300);
+			} else {
+				$('.goTOP').slideUp(300);
+			}
+		});
+ 	});
+	</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/toastr.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--<script src="js/js.js"></script>-->
+    <script src="js/jquery-3.4.1.min.js" ></script>
+    
+    <title>ABOUT</title>
+  	</head>
+  	<body>
+
+  	<!-- NavBAR	 -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark navbar-dark" >
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+  		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="index.html" style="color: #fffefe">Inicio</a>
+			    </li>
+
+			    <li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" style="color: #fffefe" href="windows.html" id="navbardrop" data-toggle="dropdown">
+			        Windows
+			      </a>
+			      <div class="dropdown-menu">
+			      <a class="dropdown-item" href="windows.html">SERVICIOS</a>
+			      <a class="dropdown-item" href="windows.html#windowsPreconfiguraciones">Preconfiguraciones</a>
+			      <a class="dropdown-item" href="windows.html#windowsAD">Active Directory</a>
+			      <a class="dropdown-item" href="windows.html#windowsDNS">DNS</a>
+			      <a class="dropdown-item" href="windows.html#windowsDHCP">DHCP</a>
+			      <a class="dropdown-item" href="windows.html#windowsHTTPyFTP">HTTP & FTP</a>
+			      <a class="dropdown-item" href="windows.html#windowsSMTP">SMTP</a>
+			      </div>
+			    </li>
+
+			    <li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" style="color: #fffefe" href="#" id="navbardrop" data-toggle="dropdown">
+			        Linux
+			      </a>
+			      <div class="dropdown-menu">
+			        <a class="dropdown-item" href="#">DHCP</a>
+			        <a class="dropdown-item" href="#">DNS</a>
+			        <a class="dropdown-item" href="#">FTP</a>
+			        <a class="dropdown-item" href="#">SMTP</a>
+			        <a class="dropdown-item" href="#">HTTP</a>
+			      </div>
+			    </li>
+
+			    <li class="nav-item">
+		      		<a class="nav-link" style="color: #fffefe">Acerca de</a>
+		    	</li>
+			    	    	
+			</ul>
+    	</div>
+	</nav>
+	
+	<!-- Titulo Windows -->
+
+	<div class="jumbotron jumbotron-fluid " style="background-color:#0da145; color: #fffefe">
+  				<div class="container">
+    				<h1 class="display-5 text-center">Acerca de...</h1>
+    				<p class="lead text-center">En esta seccion encontrara información sobre el autor de esta guia.</p>
+  				</div>
+	</div>
+
+	<!-- Contenedor  General  -->
+	<div class="container">		
+
+	<!-- Primera Fila  -->
+		<div class="card-deck">
+			<div class="col-md-7">
+			  	<div class="card ">
+				  <div class="card-header text-center">Datos de Contacto:</div>
+					<div class="card-body text-center">
+				    	<p class="card-text">Nombre:     Joham Sebastian Medina Corredor</p>
+				    	<p class="card-text">Celular:    3114669598</p>
+				    	<p class="card-text">Correo:     joham.medina@upt.edu.co</p>
+				    	<p class="card-text">Profesión:  Estudiante Ingenieria de Sistemás y Computación</p>
+				    	<br>
+				    	<center>
+				    		<img src="images/logos/sistemas.jpg" height="150px" width="150px">
+				    		<img src="images/logos/uptc.png" height="150px" width="250px">			
+				    	</center>	
+				  	</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+	  			<div class="card">
+			    	<img src="images/perfil2.jpg" height="400px">
+				</div>
+			</div>		
+    	</div>
+
+	</div>
+  	
+<br>
+	<!-- Footer -->
+	<footer class="py-4 bg-dark text-white-50">
+	    <div class="container text-center">
+	      <small>Copyright &copy; Joham Sebastian Medina Corredor</small>
+	    </div>
+  	</footer>
+	<!-- Footer -->
+
+	<!-- Boton de ir ARRIBA -->
+	<span class="goTOP">
+		<i class="fas fa-arrow-alt-circle-up"></i>
+	</span>
+ 	<!-- Scrip de boton de ir ARRIBA-->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+ 
+		$('.goTOP').click(function(){
+			$('body, html').animate({
+				scrollTop: '0px'
+			}, 300);
+		});
+ 
+		$(window).scroll(function(){
+			if( $(this).scrollTop() > 0 ){
+				$('.goTOP').slideDown(300);
+			} else {
+				$('.goTOP').slideUp(300);
+			}
+		});
+ 	});
+	</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+  </body>
+</html>
+
+

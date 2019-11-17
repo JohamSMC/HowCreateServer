@@ -1,0 +1,17 @@
+.zoom {
+    transition: transform .3s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.5); 
+}
+
+.goTOP{
+	display:none;
+	cursor: pointer;
+	color:#f39c12;
+	font-size: 2em;
+	position: fixed;
+	bottom:0.5em;
+	right:0.5em;
+}

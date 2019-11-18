@@ -378,10 +378,10 @@
     	<div class="card-deck">
     	   	<div class="col-md-6">
 	    		<div class="card">
-			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-1.png" width="300" height="300" alt="Card image cap">
 		  			<div class="card-body">
 			    		<h5 class="card-title text-center">Paso 1</h5>
-			    		<p class="card-text text-center"></p>
+			    		<p class="card-text text-center">Se instala el paquete postfix y el paquete dovecot, con el siguiente comando "apt-get install postfix dovecot-imapd dovecot-pop3d dovecot-common". </p>
 		    		</div>
 				</div>
 	    
@@ -389,10 +389,10 @@
 
 	    	<div class="col-md-6">
 	    		<div class="card">
-			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300"alt="Card image cap">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-2.png" width="300" height="300"alt="Card image cap">
 		  			<div class="card-body">
 			    		<h5 class="card-title text-center">Paso 2</h5>
-			    		<p class="card-text text-center"></p>
+			    		<p class="card-text text-center">Se configura el archivo "/etc/postfic/main.cf" como se muestra en la imagen.</p>
 		    		</div>
 	    		</div>
 	    	</div>
@@ -404,10 +404,10 @@
     	<div class="card-deck">
     	   	<div class="col-md-6">
 	    		<div class="card">
-			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-3.png" width="300" height="300" alt="Card image cap">
 		  			<div class="card-body">
 			    		<h5 class="card-title text-center">Paso 3</h5>
-			    		<p class="card-text text-center"></p>
+			    		<p class="card-text text-center">Se configur el archivo "/etc/dovecot/conf.d/10-mail.conf" y se reinicia el SERVICIO con el comando "/etc/init.d/postfix restart".</p>
 		    		</div>
 				</div>
 	    
@@ -415,14 +415,108 @@
 
 	    	<div class="col-md-6">
 	    		<div class="card">
-			    <img class="card-img-top zoom" src="images/pantallazosLinux/" width="300" height="300" alt="Card image cap">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-4.png" width="300" height="300" alt="Card image cap">
 		  			<div class="card-body">
 			    		<h5 class="card-title text-center">Paso 4</h5>
-			    		<p class="card-text text-center"></p>
+			    		<p class="card-text text-center">Se instala el paquete squirrelmail, con el siguiente comando "apt-get install squirrelmail". </p>
 		    		</div>
 				</div>
 	    
 	    	</div>
+    	</div>
+
+    	<br>
+		<!-- Tercera Fila SMTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-5.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 5</h5>
+			    		<p class="card-text text-center">Se ejecuta el comando "squirrelmail-configure" y se configura.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-6.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 6</h5>
+			    		<p class="card-text text-center">Se ejecuta el comando que se ve en pantalla "ln -s /usr/share/squirrelmail /var/www/html/joham.mail", donde [/johma.mail] es el dominio que configuro al instalar postfix.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+    	</div>
+    	<br>
+		<!-- Cuarta Fila SMTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-7.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 7</h5>
+			    		<p class="card-text text-center">Se crea la carpeta "mail" con el siguiente comando "mkdir /home/mail".</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-8.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 8</h5>
+			    		<p class="card-text text-center">Se ejecutan los camandos que se ven seleccionados en la imagen donde en las rutas "usu1" y "usu3" son el nombre de los usuarios del correo.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+    	</div>
+    	<br>
+		<!-- Quinta Fila SMTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-9.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 9</h5>
+			    		<p class="card-text text-center">Se le asigna contraseña a los usuarios con los comando que se ven en la imagen, "usu1" y "usu3" son los nombres de los usuarios creados en el PASO 8.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-10.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 10</h5>
+			    		<p class="card-text text-center">Por ultimo se ejecutan los comandos que se ven la imagen.</p>
+		    		</div>
+				</div>
+	    
+	    	</div>
+    	</div>
+    	<br>
+		<!-- Sexta Fila SMTP -->
+
+    	<div class="card-deck">
+    	   	<div class="col-md-6">
+	    		<div class="card">
+			    <img class="card-img-top zoom" src="images/pantallazosLinux/SMTP/SMTP-11.png" width="300" height="300" alt="Card image cap">
+		  			<div class="card-body">
+			    		<h5 class="card-title text-center">Paso 11</h5>
+			    		<p class="card-text text-center">Ya podemo acceder al correo desde el navegador con la direccion "joham.com/joham.mail" donde "joham.com/..." es el domino del sevidor & ".../joham.mail" es el dominio que se configuro al instalar postfix. </p>
+		    		</div>
+				</div>
+	    
+	    	</div>	    	
     	</div>
 
 	 	<br>

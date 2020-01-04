@@ -70,7 +70,7 @@
 	<!-- Titulo Encabezado -->
 
 	
-	<div class="jumbotron text-center" style="background-color:#212529; color: #fffefe">
+	<div class="jumbotron text-center" style="background-color:#212529; color: #fffefe; isolation: isolate">
     	<h1 >INSTALAR Y CONFIGURAR SERVIDOR EN WINDOWDS & LINUX</h1>
     	<hr class="my-4" style="border: 1px solid white;">
     	<p>Joham Sebastian Medina Corredor</p>
@@ -84,7 +84,7 @@
 
 		<!-- Titulo Introduccion -->
 
-		<div class="jumbotron jumbotron-fluid " style="background-color: #1d8348; color: #fffefe">
+		<div class="jumbotron jumbotron-fluid " style="background-color: #1d8348; color: #fffefe; isolation: isolate">
   				<div class="container">
     				<h1 class="display-5 text-center">INTRODUCCION</h1>
     				<p class="lead text-center">En esta pagina encontrara un tutorial paso a paso de como instalar un servidor web que ofresca los servicios de DNS, DHCP, FTP, STMP & HTTP en los dos principales sistemas operativos: Windows y Linux</p>
@@ -133,7 +133,7 @@
 	
 	
 	<!-- Footer -->
-	<footer class="py-4 bg-dark text-white-50">
+	<footer class="py-4 bg-dark text-white-50" style=" isolation: isolate ">
 	    <div class="container text-center">
 	      <small>Copyright &copy; Joham Sebastian Medina Corredor</small>
 	    </div>
@@ -169,7 +169,34 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+
+	<!--
+		Codigo para DARK MODE
+		Use  'isolation: isolate' en los elementos que no se desean cambiar el color del fondo
+	-->
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.4/lib/darkmode-js.min.js"></script>
+	<script>
+  	var options = {
+		bottom: '80px', // default: '32px'
+		right: '10px', // default: '32px'
+		left: 'unset', // default: 'unset'
+		time: '0.5s', // default: '0.3s'
+		mixColor: '#fff', // default: '#fff'
+		backgroundColor: '#fff',  // default: '#fff'
+		buttonColorDark: '#100f2c',  // default: '#100f2c'
+		buttonColorLight: '#fff', // default: '#fff'
+		saveInCookies: true, // default: true,
+		label: '🌓', // default: ''
+		autoMatchOsTheme: true // default: true
+		}
+
+		const darkmode = new Darkmode(options);
+		darkmode.showWidget();
+
+	</script>
+
    
   </body>
 </html>
